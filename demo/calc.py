@@ -15,14 +15,16 @@
 
 def calculade(a, b, op):
     operands = {
-        "+": a + b,
-        "-": a - b,
-        "*": a * b,
-        "/": a / b
+        "+": lambda: a + b,
+        "-": lambda: a - b,
+        "*": lambda: a * b,
+        "**": lambda: a ** b,
+        "/": lambda: "Division by zero" if b == 0 else a / b,
+        "//": lambda: "Division by zero" if b == 0 else a // b
     }
 
     if op in operands:
-        return operands[op]
+        return operands[op]()
     else:
         return "Choose correct operant"
 
