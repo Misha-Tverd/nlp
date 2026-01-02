@@ -6,7 +6,7 @@ sum_number = 0
 min_number = 999999999
 max_number = 0
 for i in numbers.split():
-    list_numbers.append(i)
+    list_numbers.append(int(i))
     number_int = int(i)
     if number_int < min_number:
         min_number = number_int
