@@ -1,0 +1,5 @@
+count: 3
+summary: 370
+minimun: 23
+maximum: 324
+avarage: 123.33333333333333
