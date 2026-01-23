@@ -5,8 +5,7 @@ def main(text):
         list_numbers = convert_str(text)
         return stats_list_int(list_numbers)
     elif config.DEFAULT_MODE = "text":
-        new_list = convert_str_to_int(text)
-        stat_list = list_stats_word(new_list)
+        stat_dict = list_stats_word(text)
         return stat_dict
 
 def convert_str(text):
@@ -35,21 +34,15 @@ def stat_list_int(some_list):
         elif i > maximum:
             maximum = i 
     avarege = summary / count
-    return [count, summary, minimum, maximum, avarege]
+    stats_dict = {
+        "count": count,
+        "summary": summary,
+        "minimun": minimum,
+        "maximum": maximum,
+        "avarage": avarege
+    }
+    return stats_dict
     
-
-def convert_str_to_int(text):
-    new_list = []
-    errors = ""
-    for i in text.split():
-        try:
-            i = int(i)
-            new_list.append(i)
-        except ValueError:
-            erros += (f"The value of \"{i}\" was not a number, so it was not preserved. \n")
-    return new_list
-        
-
 
 def list_stats_word(some_list):
     
@@ -71,5 +64,4 @@ def list_stats_word(some_list):
         "count": max_count
     }
 
-    return stats
     
