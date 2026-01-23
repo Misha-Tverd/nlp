@@ -1,10 +1,14 @@
 import config
+import io_utils
 
-def main(text):
-    if config.DEFAULT_MODE = "numbers":
+
+def main():
+    text = io_utils.read(config.INPUT_TXT)
+
+    if config.DEFAULT_MODE == "numbers":
         list_numbers = convert_str(text)
         return stats_list_int(list_numbers)
-    elif config.DEFAULT_MODE = "text":
+    elif config.DEFAULT_MODE == "text":
         stat_dict = list_stats_word(text)
         return stat_dict
 
@@ -20,7 +24,7 @@ def convert_str(text):
     return new_list
 
 
-def stat_list_int(some_list):
+def stats_list_int(some_list):
     count = 0
     summary = 0 
     minimum = some_list[0]
