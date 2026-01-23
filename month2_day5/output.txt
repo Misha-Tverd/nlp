@@ -1,5 +1,5 @@
-count : 7
-summary : 628
-minimun : 1
-maximum : 324
-avarage : 89.71428571428571
+count: 7
+summary: 628
+minimun: 1
+maximum: 324
+avarage: 89.71428571428571

@@ -2,9 +2,8 @@ import config
 import io_utils
 
 
-def main():
-    text = io_utils.read(config.INPUT_TXT)
-
+def main(text):
+    
     if config.DEFAULT_MODE == "numbers":
         list_numbers = convert_str(text)
         return stats_list_int(list_numbers)
@@ -69,3 +68,5 @@ def list_stats_word(some_list):
     }
 
     
+if __name__ == "__main__":
+    main()
