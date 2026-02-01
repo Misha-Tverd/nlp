@@ -1,0 +1,1 @@
+I understand when i need use, try and exception, exsample they i try read file better use try, or we get None or empty better use if. 
